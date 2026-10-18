@@ -1,0 +1,124 @@
+.map-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container-full {
+  height: 100%;
+  width: 100%;
+  background: #eef1ec;
+  font-family: var(--font-sans);
+}
+
+.pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--pin-color, #2f6f5e);
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.pin span {
+  transform: rotate(45deg);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.map-control {
+  position: absolute;
+  bottom: 24px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  font-size: 16px;
+  color: var(--color-primary);
+  cursor: pointer;
+  z-index: 500;
+}
+
+.map-control:hover {
+  background: var(--color-surface-muted);
+}
+
+.map-legend {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 290px;
+  max-width: calc(100% - 28px);
+  max-height: calc(100% - 28px);
+  overflow-y: auto;
+  padding: 14px;
+  z-index: 500;
+}
+
+.map-legend-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.map-legend-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.legend-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.live-badge {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-danger);
+}
+
+.map-empty-banner {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  max-width: 360px;
+  padding: 14px 16px;
+  z-index: 500;
+}
+
+@media (max-width: 640px) {
+  .map-legend {
+    width: auto;
+    right: 14px;
+  }
+}
